@@ -1,0 +1,30 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+# R markdown tutorial 
+### by Ryan Collins 
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(message = FALSE)
+```
+
+```{r load-packages, message = TRUE}
+library(tidyverse)
+```
+
+```{r, include = FALSE, eval = TRUE}
+#this won't be treated as R-code
+```
+
+```{r make-plot, fig.width= 8, fig.height=8}
+
+storms %>%
+  group_by(year) %>%
+  summarize(wind = mean(wind)) %>%
+  ggplot(mapping = aes(x = year, y = wind)) +
+  geom_line() + 
+  geom_point()
+```
