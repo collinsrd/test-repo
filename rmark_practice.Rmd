@@ -5,6 +5,7 @@ editor_options:
 ---
 # R markdown tutorial 
 ### by Ryan Collins 
+## THIS CHANGE IS FOR GIT!!
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
